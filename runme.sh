@@ -7,6 +7,7 @@ echo "removing all evlsprt properties in options.xml..."
 sed -i  '' '/evlsprt/d' ~/Library/Preferences/IntelliJIdea*/options/other.xml
 
 echo "removing some plist files..."
+rm ~/Library/Preferences/com.apple.java.util.prefs.plist
 rm ~/Library/Preferences/com.jetbrains.intellij.plist
 rm ~/Library/Preferences/jetbrains.idea.*.plist
 

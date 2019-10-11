@@ -1,4 +1,4 @@
-# The scripts resets Intellij IDEA trial period but keeps settings, logs and cache  
+# The script resets Intellij IDEA trial period but keeps settings, logs and cache  
 
 Please use it in study purpose only
 

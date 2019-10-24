@@ -1,4 +1,6 @@
-# The script resets Intellij IDEA trial period but keeps settings, logs and cache  
+# The script resets JetBrains products trial period but keeps settings, logs and cache  
+
+Supports: Intellij IDEA, WebStorm and DataGrip
 
 Please use it in study purpose only
 

@@ -6,7 +6,7 @@ Please use it in study purpose only
 
 ## Usage
 
-1. Close Intellij IDEA application
+1. Close all JetBrains applications
 2. Run script
 3. Reboot 
 

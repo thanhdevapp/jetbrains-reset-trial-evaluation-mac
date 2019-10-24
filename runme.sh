@@ -1,14 +1,19 @@
 #!/bin/bash
 
-echo "removing evaluation key..."
-rm  -rf ~/Library/Preferences/IntelliJIdea*/eval
+for product in IntelliJIdea WebStorm DataGrip; do
+  echo "Resetting trial period for $product"
 
-echo "removing all evlsprt properties in options.xml..."
-sed -i  '' '/evlsprt/d' ~/Library/Preferences/IntelliJIdea*/options/other.xml
+  echo "removing evaluation key..."
+  rm  -rf ~/Library/Preferences/$product*/eval
 
-echo "removing some plist files..."
-rm ~/Library/Preferences/com.apple.java.util.prefs.plist
-rm ~/Library/Preferences/com.jetbrains.intellij.plist
-rm ~/Library/Preferences/jetbrains.idea.*.plist
+  echo "removing all evlsprt properties in options.xml..."
+  sed -i  '' '/evlsprt/d' ~/Library/Preferences/$product*/options/other.xml
+
+  echo "removing additional plist files..."
+  rm ~/Library/Preferences/com.apple.java.util.prefs.plist
+  rm ~/Library/Preferences/com.jetbrains.*.plist
+  rm ~/Library/Preferences/jetbrains.*.*.plist
+  echo " "
+done
 
 echo "That's it, enjoy ;)"

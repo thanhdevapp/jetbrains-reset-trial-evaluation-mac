@@ -1,6 +1,6 @@
 # The script resets JetBrains products trial period but keeps settings, logs and cache  
 
-Supports: Intellij IDEA, WebStorm and DataGrip
+Supports: Intellij IDEA, WebStorm, DataGrip and PhpStorm
 
 Please use it in study purpose only
 
@@ -8,7 +8,7 @@ Please use it in study purpose only
 
 1. Close all JetBrains applications
 2. Run script
-3. Reboot 
+3. Reboot
 
 Run script:
  ```sh

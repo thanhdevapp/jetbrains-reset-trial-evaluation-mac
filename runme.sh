@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for product in IntelliJIdea WebStorm DataGrip PhpStorm; do
+for product in IntelliJIdea WebStorm DataGrip PhpStorm CLion; do
   echo "Resetting trial period for $product"
 
   echo "removing evaluation key..."

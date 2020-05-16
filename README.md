@@ -1,6 +1,6 @@
-# The script resets JetBrains products trial period but keeps settings, logs and cache  
+# The script resets JetBrains products trial period but keeps settings, logs and cache
 
-Supports: Intellij IDEA, WebStorm, DataGrip, PhpStorm  and CLion
+Supports: Intellij IDEA, WebStorm, DataGrip, PhpStorm, CLion, PyCharm, RubyMine and GoLand
 
 Please use it in study purpose only
 
@@ -11,6 +11,7 @@ Please use it in study purpose only
 3. Reboot
 
 Run script:
+
  ```sh
  ./runme.sh
 ```

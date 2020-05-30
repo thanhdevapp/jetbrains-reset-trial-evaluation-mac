@@ -5,6 +5,7 @@ Supports: Intellij IDEA, WebStorm, DataGrip, PhpStorm, CLion, PyCharm, RubyMine,
 Please use it in study purpose only
 
 ## Usage
+### Manually
 
 - Close all JetBrains applications
 - For first time only:
@@ -16,3 +17,22 @@ chmod +x runme.sh
 ./runme.sh
 ```
 - Reboot
+
+
+### Experimental: Reset evaluation automatically using launchd agent
+
+- Load job into launchctl:
+```shell script
+chmod +x runme.sh
+./runme.sh --prepare-env
+```
+
+- Unload job:
+```shell script
+launchctl unload ~/Library/LaunchAgents/com.jetbrains.reset.plist 
+```
+
+Every first day of each month the job will:
+- Close all Intellij applications
+- Reset evaluation
+- Flush preference cache

@@ -25,7 +25,7 @@ if [ $1 = "--launch-agent" ]; then
   PROCESS=(idea webstorm datagrip phpstorm clion pycharm goland rubymine rider)
   COMMAND_PRE=("${PROCESS[@]/#/MacOS/}")
 
-  # Kill all Intellij appcications
+  # Kill all Intellij applications
   kill -9 `ps aux | egrep $(IFS=$'|'; echo "${COMMAND_PRE[*]}") | awk '{print $2}'`
 fi
 

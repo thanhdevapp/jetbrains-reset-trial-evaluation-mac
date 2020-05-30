@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.jetbrains.reset</string>
+		<key>ProgramArguments</key>
+		<array>
+  		  <string>/bin/sh</string>
+  		  <string>-c</string>
+  		  <string>exec $HOME/Scripts/jetbrains-reset.sh --launch-agent</string>
+	    </array>
+		<key>StartCalendarInterval</key> 
+		<dict> 
+		    <key>Day</key> 
+		    <integer>1</integer> 
+		</dict>
+    </dict>
+</plist>

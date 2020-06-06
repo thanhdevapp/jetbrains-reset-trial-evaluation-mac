@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 = "--prepare-env" ]; then
+if [ "$1" = "--prepare-env" ]; then
   DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
   mkdir -p ~/Scripts
 
@@ -21,7 +21,7 @@ if [ $1 = "--prepare-env" ]; then
   exit 0
 fi
 
-if [ $1 = "--launch-agent" ]; then
+if [ "$1" = "--launch-agent" ]; then
   PROCESS=(idea webstorm datagrip phpstorm clion pycharm goland rubymine rider)
   COMMAND_PRE=("${PROCESS[@]/#/MacOS/}")
 
@@ -57,7 +57,7 @@ echo
 echo "That's it, enjoy ;)"
 
 # Flush preference cache
-if [ $1 = "--launch-agent" ]; then
+if [ "$1" = "--launch-agent" ]; then
   killall cfprefsd
   echo "Evaluation was reset at $(date)" >> ~/Scripts/logs
 fi

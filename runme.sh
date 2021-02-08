@@ -31,14 +31,14 @@ fi
 
 # Reset Intellij evaluation
 #for product in IntelliJIdea WebStorm DataGrip PhpStorm CLion PyCharm GoLand RubyMine Rider; do
-for product in WebStorm Rider; do
+for product in Rider; do
   echo "Resetting trial period for $product"
 
 #  echo "removing evaluation key..."
 #  rm -rf ~/Library/Preferences/$product*/eval
 
   # Above path not working on latest version. Fixed below
-  rm -rf ~/Library/Application\ Support/JetBrains/$product*/eval
+  rm -rf ~/Library/Application\ Support/JetBrains/$product*/eval/*.key
 
 #  echo "removing all evlsprt properties in options.xml..."
 #  sed -i '' '/evlsprt/d' ~/Library/Preferences/$product*/options/other.xml
@@ -53,6 +53,14 @@ echo "removing additional plist files..."
 rm -f ~/Library/Preferences/com.apple.java.util.prefs.plist
 rm -f ~/Library/Preferences/com.jetbrains.*.plist
 rm -f ~/Library/Preferences/jetbrains.*.*.plist
+
+for f in ~/Library/Preferences/jetbrains.*.plist; do
+    if [[ -f $f ]]; then
+        fn=${f##*/}; key=${fn%.plist}
+        echo delete $key from pref and file $f
+        defaults delete "${fn%.plist}" 2>/dev/null && rm "$f"
+    fi
+done
 
 
 echo
